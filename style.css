@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Newsreader:wght@400&display=swap");
+
+:root {
+  --primary-color: #1d1d30;
+  --secondary-color: #e8e8f0;
+  --tertiary-color: #7d7d8d;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+input,
+button {
+  font-family: "Inter", sans-serif;
+}
+
+input,
+button {
+  font-size: 16px;
+}
+
+.head_bar {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+main {
+  max-width: 800px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.input_section {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--secondary-color);
+  padding: 4em;
+  border-radius: 1em;
+}
+
+.input_section > h2 {
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.input_section > form > .input {
+  margin: 2em 0;
+}
+
+.input_section > form > button {
+  background-color: var(--primary-color);
+  color: white;
+  border: 0;
+  border-radius: 0.25em;
+  display: block;
+  width: 100%;
+  padding: 1em;
+  cursor: pointer;
+}
+
+.input_section > form > button:hover {
+  background-color: cornflowerblue;
+}
+
+.input_section > form > button > span {
+  font-weight: bold;
+}
+
+.input_section > form > .input > input {
+  display: block;
+  width: 100%;
+  padding: 1em;
+  border-radius: 5px;
+  margin-top: 0.5em;
+  border: var(--secondary-color);
+  font-size: 14px;
+}
+
+.input_section > form > .input > label {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.input_section > form > .input_inline {
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+}
+
+.input_section > form > .input_inline > label {
+  color: var(--primary-color);
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.search_section {
+  margin: 16px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+}
+
+.search_section > h2 {
+  color: var(--primary-color);
+  padding: 1em 0;
+}
+
+.search_section > form {
+  padding: 1em 3.5em 2em 4em;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr 0.25fr;
+  grid-gap: 10px;
+}
+
+.search_section > form > label {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.search_section > form > input {
+  padding: 1em;
+  border-radius: 5px;
+  border: var(--secondary-color);
+  font-size: 14px;
+}
+
+.search_section > form > button {
+  background-color: var(--primary-color);
+  color: white;
+  border: 0;
+  border-radius: 0.25em;
+  cursor: pointer;
+}
+
+.search_section > form > button:hover {
+  background-color: cornflowerblue;
+}
+
+.book_shelf {
+  margin: 16px 0 0 0;
+  padding: 16px;
+  border-radius: 1em;
+  background-color: var(--secondary-color);
+}
+
+.book_shelf > h2 {
+  color: var(--primary-color);
+  padding: 1em 0 0 2em;
+}
+
+.book_shelf > .book_list {
+  padding: 16px;
+}
+
+.book_shelf > .book_list > .book_item {
+  padding: 8px 16px 16px 16px;
+  border-radius: 1em;
+  margin: 1em 2em;
+  background-color: white;
+}
+
+.book_shelf > .book_list > .book_item > h3,
+p {
+  margin: 0.75em 0.5em;
+}
+
+.bookYear {
+  font-size: 14px;
+  color: var(--tertiary-color);
+}
+
+button {
+  padding: 1em;
+  border-radius: 5px;
+}
+
+.dibaca {
+  border: 0;
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  margin: 1.5em 1em 1em 0.25em;
+  font-size: 14px;
+}
+
+.dibaca:hover {
+  background-color: cornflowerblue;
+}
+
+.hapus {
+  border: 0;
+  cursor: pointer;
+  color: cornflowerblue;
+  background-color: white;
+  font-size: 14px;
+}
+
+.hapus:hover {
+  text-decoration: underline;
+}
+
+.book_shelf > .book_list > .book_item > .action > button {
+  border: 0;
+  padding: 5px;
+  margin: 0 5px 0 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/*
+    Responsive
+*/
+
+@media screen and (max-width: 680px) {
+  .search_section > form {
+    padding: 1em 3.5em 2em 4em;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+  }
+
+  .search_section > form > button {
+    margin-top: 1em;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  main {
+    width: 100%;
+  }
+
+  .input_section {
+    padding: 2em 1em;
+  }
+
+  .search_section > form {
+    padding: 0;
+  }
+
+  .book_shelf > .book_list {
+    padding: 0;
+  }
+
+  .book_shelf > .book_list > .book_item {
+    margin: 1em 0;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  main {
+    width: 100%;
+  }
+}
